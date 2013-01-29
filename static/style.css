@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'OpenSansCondensedLight';
+    src: url('OpenSans-CondLight-webfont.eot');
+    src: url('OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-CondLight-webfont.woff') format('woff'),
+         url('OpenSans-CondLight-webfont.ttf') format('truetype'),
+         url('OpenSans-CondLight-webfont.svg#OpenSansCondensedLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansCondensedBold';
+    src: url('OpenSans-CondBold-webfont.eot');
+    src: url('OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-CondBold-webfont.woff') format('woff'),
+         url('OpenSans-CondBold-webfont.ttf') format('truetype'),
+         url('OpenSans-CondBold-webfont.svg#OpenSansCondensedBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body  {font-family: 'OpenSansCondensedLight'; font-size:12x; color:#a6b7c0}
+#main {width:740px; marginp:20 0 0 20px}
+.float { float:left; margin-right:50px}
+.table1 {width:500px;}
+.title {font-family: 'OpenSansCondensedBold'; font-size:24px; color:#515a64; float:left; margin-bottom:10px}
+.dark { color:#515a64;}

@@ -1,0 +1,58 @@
+{% extends "ligue1/base.html" %}
+{% block centercontent %}
+
+<html>
+<head>
+<link href="../../static/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div align="center">
+	<img src="../../static/img/banner.png" />
+    <div id="main" align="left">
+        <div class="float">
+          <div class="title">Classement normal</div>
+            <br />
+            <table id="classement">
+            <th align="left" class="dark">Club</th>
+            <th align="center" class="dark">Points</th>
+            {% for club in ranking %}
+                {% if club.budget != 0 %}
+                <tr>
+                    <td>{{ club.name }}</td>
+                    <td align="center">{{ club.points }}</td>
+                </tr>
+                {% endif %}
+            {% endfor %}
+            </table>
+        </div>
+  <div>   
+            <div class="title">Classement points fonction du budget</div>
+            <br />
+        <table id="classement" class="table1">
+          <th align="left" class="dark">Club</th>
+            <th align="center" class="dark">Budget</th>
+            <th align="center" class="dark">Points</th>
+            <th align="center" class="dark">Vrai Points</th>
+            
+            {% for club in real_ranking %}
+                {% if club.budget != 0 %}
+            <tr>
+                <td>{{ club.name }}</td>
+                <td align="center">{{ club.budget|floatformat:2 }} M&#8364;</td>
+              <td align="center">{{ club.points }}</td>
+                <td align="center">{{ club.real_points|floatformat:2 }}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+      </table>
+        </div>
+    </div>
+    <br />
+    <img src="../../static/img/footer.png" />
+</div>
+</body>
+</html>
+
+{% endblock %}
+
